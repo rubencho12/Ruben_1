@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Saldo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input {
+            margin-bottom: 10px;
+            padding: 5px;
+            width: 200px;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #resultado {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        var saldo = 1000; // Saldo inicial
+
+        function realizarOperacion() {
+            var consignacion = parseFloat(document.getElementById('consignacion').value);
+            var retiro = parseFloat(document.getElementById('retiro').value);
+
+            // Validar que los valores son números
+            if (isNaN(consignacion) || isNaN(retiro)) {
+                document.getElementById('resultado').textContent = 'Por favor, ingrese valores válidos.';
+                return;
+            }
+
+            // Actualizar el saldo
+            saldo += consignacion; // Añadir consignación al saldo
+            if (retiro > saldo) {
+                document.getElementById('resultado').textContent = 'Saldo insuficiente.';
+            } else {
+                saldo -= retiro; // Realizar el retiro
+                document.getElementById('resultado').textContent = 'Nuevo saldo: ' + saldo.toFixed(2);
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Gestión de Saldo</h1>
+    <p>Saldo inicial: <span id="saldo-inicial">1000</span></p>
+    
+    <label for="consignacion">Consignación:</label>
+    <input type="number" id="consignacion" step="0.01" min="0">
+
+    <label for="retiro">Retiro:</label>
+    <input type="number" id="retiro" step="0.01" min="0">
+
+    <button onclick="realizarOperacion()">Realizar Operación</button>
+
+    <div id="resultado"></div>
+</body>
+</html>

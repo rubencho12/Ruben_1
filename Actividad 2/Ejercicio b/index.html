@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Temperaturas</title>
+   
+</head>
+<body>
+    <h1>Registro de Temperaturas</h1>
+    <label for="numTemperaturas">Ingresa el número de temperaturas a registrar:</label>
+    <input type="number" id="numTemperaturas" placeholder="Ej: 5">
+    <button onclick="solicitarTemperaturas()">Registrar Temperaturas</button>
+    
+    <div id="formularioTemperaturas"></div>
+    <button id="calcularPromedioBtn" style="display:none;" onclick="calcularPromedio()">Calcular Promedio</button>
+    <div id="resultado"></div>
+
+    <script src="maincorregido.js"></script>
+</body>
+</html>

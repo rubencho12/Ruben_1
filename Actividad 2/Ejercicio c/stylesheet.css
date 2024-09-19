@@ -1,0 +1,82 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.calculator {
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    background: #fff;
+    padding: 20px;
+    width: 300px;
+}
+
+.display {
+    margin-bottom: 10px;
+}
+
+#display {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.5em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: right;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    padding: 15px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+button:active {
+    background-color: #ccc;
+}
+
+button:nth-child(1) {
+    background-color: #ff6f61;
+    color: #fff;
+}
+
+button:nth-child(2),
+button:nth-child(3),
+button:nth-child(4),
+button:nth-child(5),
+button:nth-child(6),
+button:nth-child(7),
+button:nth-child(8),
+button:nth-child(9),
+button:nth-child(10),
+button:nth-child(11),
+button:nth-child(12),
+button:nth-child(13),
+button:nth-child(14),
+button:nth-child(15),
+button:nth-child(16),
+button:nth-child(17),
+button:nth-child(18),
+button:nth-child(19) {
+    background-color: #ffb74d;
+}
+

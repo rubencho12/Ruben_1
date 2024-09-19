@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generar Secuencia</title>
+    <script>
+        function generarSecuencia() {
+            // Obtener los valores de los campos de entrada
+            var num1 = parseFloat(document.getElementById('numero1').value);
+            var num2 = parseFloat(document.getElementById('numero2').value);
+
+            // Validar que los valores son números y que num1 es menor que num2
+            if (isNaN(num1) || isNaN(num2) || num1 >= num2) {
+                alert('Por favor, ingrese números válidos donde el primer número sea menor que el segundo.');
+                return;
+            }
+
+            // Crear la secuencia de números
+            var secuencia = [];
+            for (var i = num1; i <= num2; i += 2) { // Cambia 2 por el paso deseado
+                secuencia.push(i);
+            }
+
+            // Mostrar la secuencia
+            document.getElementById('resultado').textContent = 'Secuencia: ' + secuencia.join(' ');
+        }
+    </script>
+</head>
+<body>
+    <h1>Generar Secuencia de Números</h1>
+    <label for="numero1">Número 1:</label>
+    <input type="text" id="numero1">
+    <br><br>
+    <label for="numero2">Número 2:</label>
+    <input type="text" id="numero2">
+    <br><br>
+    <button onclick="generarSecuencia()">Generar Secuencia</button>
+    <br><br>
+    <div id="resultado"></div>
+</body>
+</html>

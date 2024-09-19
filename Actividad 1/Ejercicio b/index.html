@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Salario</title> 
+    <style>
+        body {
+            font-family: Arial, sans-serif; 
+            margin: 50px;
+        }
+        input, button {
+            padding: 10px; 
+            margin: 5px; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora de Salario Semanal</h1> 
+
+    <!-- Etiqueta que describe el campo de entrada. Al hacer clic en esta etiqueta, se enfoca el campo de entrada asociado (input con id="horas") -->
+    <label for="horas">Ingrese las horas trabajadas:</label> 
+    
+    <!-- Campo de entrada donde el usuario ingresará las horas trabajadas -->
+    <input type="number" id="horas" min="0" required> 
+    <!-- type="number" indica que solo se permiten números, min="0" establece el valor mínimo en 0, y required indica que el campo es obligatorio -->
+
+    <!-- Botón que al hacer clic llama a la función calcularSalario() -->
+    <button onclick="calcularSalario()">Calcular Salario</button>
+
+    <!-- Elemento donde se mostrará el resultado del cálculo del salario -->
+    <h2 id="resultado"></h2>
+
+    <!-- Sección de JavaScript que contiene la lógica para calcular el salario -->
+ 
+ <script src="main.js">
+      
+    </script>
+</body>
+</html>
